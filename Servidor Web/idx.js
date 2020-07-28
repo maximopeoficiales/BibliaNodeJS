@@ -13,6 +13,9 @@ http
     } else if (url === "/blog") {
       response.writeHead(200, { "Content-Type": "text/html" });
       response.write(blog);
+    }else{
+      response.writeHead(400, { "Content-Type": "text/html" });
+      response.write("Pagina no encontrada :C");
     }
     response.end();
   })
